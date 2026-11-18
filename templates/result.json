@@ -1,0 +1,20 @@
+{
+  "task_id": 1,
+  "completed_by": "machine-name",
+  "timestamp": "2026-11-18T23:00:00Z",
+  "summary": "Brief summary of what was found or done",
+  "findings": [
+    "finding 1",
+    "finding 2"
+  ],
+  "deliverables": [
+    "report.md",
+    "data.json"
+  ],
+  "next_steps": [
+    "monitor",
+    "prototype"
+  ],
+  "confidence": 0.9,
+  "notes": "Any additional context for the leader"
+}
