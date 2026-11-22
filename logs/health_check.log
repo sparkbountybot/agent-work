@@ -1,26 +1,19 @@
-=== Health Check Log ===
-Timestamp: 2026-11-21 22:28:45 UTC
+=== Health Check — $(date -u) ===
 
---- Website Status ---
-URL: https://art0fficial.netlify.app/
-HTTP Status Code: 401 (Unauthorized)
-Note: Site responds but returns 401 — likely a deploy/build issue or password protection misconfiguration. Connection and TLS succeed; the server is rejecting the request.
+[1] Website Status: https://art0fficial.netlify.app/
+    HTTP 401 — Site returns Unauthorized. Not accessible.
+    (Previous runs: 200 OK / 403 / 401 — site has been intermittently unavailable)
 
---- Git Status (/sandbox/new) ---
-Modified files:
-  M logs/full_cycle.log
-  M logs/health_check.log
-Recent commits:
-  674e31f Autonomous cycle: 2026-11-21_17:43
-  f478f4b Autonomous cycle: 2026-11-21_11:42
-  b8d73b9 Autonomous cycle: 2026-11-21_05:41
-  21ba499 Autonomous cycle: 2026-11-20_23:39
-  8e6b70b Autonomous cycle: 2026-11-20_17:36
+[2] Git Status (/sandbox/new):
+    Modified files:
+      M logs/full_cycle.log
+      M logs/health_check.log
+    No untracked or deleted files. Working tree clean aside from log edits.
 
---- autonomous_daemon.py ---
-Not found at /sandbox/new/autonomous_daemon.py
+[3] autonomous_daemon.py:
+    File does not exist at /sandbox/new/autonomous_daemon.py.
+    No daemon executed.
 
---- Summary ---
-• Website: Responds (TLS OK) but returns HTTP 401 — needs investigation.
-• Git: Two modified log files, no uncommitted changes beyond existing logs. Latest commit from 2026-11-21 17:43 UTC.
-• Daemon: autonomous_daemon.py does not exist — nothing to run.
+[4] Errors:
+    - Website returns 401 Unauthorized — may indicate Netlify deploy failure or auth protection.
+    - autonomous_daemon.py missing (previously recorded in earlier health checks too).
