@@ -1,19 +1,22 @@
-=== Health Check — $(date -u) ===
+=== Health Check Report ===
+Timestamp: 2026-11-22
 
-[1] Website Status: https://art0fficial.netlify.app/
-    HTTP 401 — Site returns Unauthorized. Not accessible.
-    (Previous runs: 200 OK / 403 / 401 — site has been intermittently unavailable)
+--- Website Status ---
+URL: https://art0fficial.netlify.app/
+HTTP Status: 401 Unauthorized
+Response Time: 0.188s
+Assessment: Site is reachable (TLS completed) but returns 401. Likely protected by Netlify access rules, authentication, or bot-protection. The self-signed cert chain seen via curl -v is an artifact of the OpenShell proxy; the actual site resolves on the public internet.
+Note: Web extraction tool also confirmed the block (target_blocked / upstream forbidden).
 
-[2] Git Status (/sandbox/new):
-    Modified files:
-      M logs/full_cycle.log
-      M logs/health_check.log
-    No untracked or deleted files. Working tree clean aside from log edits.
+--- Git Status (/sandbox/new) ---
+Branch: master
+Changes: modified: logs/health_check.log
+No other unstaged or staged changes.
+Working tree is clean aside from the health_check.log itself being rewritten.
 
-[3] autonomous_daemon.py:
-    File does not exist at /sandbox/new/autonomous_daemon.py.
-    No daemon executed.
+--- autonomous_daemon.py ---
+Status: File does NOT exist at /sandbox/new/autonomous_daemon.py
+No daemon script found. Nothing to execute.
 
-[4] Errors:
-    - Website returns 401 Unauthorized — may indicate Netlify deploy failure or auth protection.
-    - autonomous_daemon.py missing (previously recorded in earlier health checks too).
+--- Errors ---
+- Website returns HTTP 401; possible Netlify access restriction, auth requirement, or access-control rule.
