@@ -24,7 +24,12 @@ File does not exist (skipped)
 File does not exist (skipped)
 
 --- Step 6: Git Commit ---
-Staging and committing all changes...
+Result: COMMITTED ✓
+Commit: 9403ddc - "Autonomous cycle: 2026-11-23_11:54"
+Files: 2 files changed (logs/full_cycle.log, logs/health_check.log)
 
 --- Step 7: Git Push ---
-Push attempt: origin master
+SSH push FAILED: DNS resolution failure for github.com (sandbox egress restriction)
+HTTPS push SUCCEEDED ✓
+Pushed master -> master on https://github.com/sparkbountybot/agent-work.git
+Note: Remote noted master branch was renamed to main on GitHub, but push accepted.
