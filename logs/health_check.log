@@ -1,26 +1,20 @@
-========================================
-Health Check — 2026-11-23 04:50 UTC
-========================================
+=== Health Check: 2026-11-23 10:54:16 UTC ===
 
-1. Website Status (https://art0fficial.netlify.app/)
-   Response Code: 401 Unauthorized
-   Content-Length: 773 bytes
-   Response Time: 0.234s
-   Server: Netlify
-   Note: Site is reachable and Netlify responded, but returns 401 instead of 200.
-         Possible causes: missing password protection config, misconfigured redirect,
-         or an auth middleware issue. The site is online — it's not a DNS or
-         deployment failure.
+--- Website Status ---
+HTTP Status: 401
+URL: https://art0fficial.netlify.app/
+Status: BLOCKED (401 Unauthorized) — likely Cloudflare challenge or access control
 
-2. Git Status (/sandbox/new)
-   Modified files: logs/health_check.log
-   Recent commits:
-     9f43bf2 — Autonomous cycle: 2026-11-22_23:52
-     b325c9d — Autonomous cycle: 2026-11-22_23:51
-     e2ef97a — Autonomous cycle: 2026-11-22_17:49
-   Note: No uncommitted changes beyond the log file itself.
+--- Git Status ---
+ M logs/health_check.log
+Modified files:
+   M logs/health_check.log
 
-3. autonomous_daemon.py (/sandbox/new/)
-   Status: File does not exist. No daemon to run.
+--- Daemon Check ---
+autonomous_daemon.py: does not exist (skipping)
 
-========================================
+--- Disk/Memory Summary ---
+overlay         3.7T  181G  3.4T   6% /
+               total        used        free      shared  buff/cache   available
+Mem:           121Gi        97Gi       1.9Gi       336Mi        22Gi        24Gi
+Swap:           15Gi       2.4Gi        13Gi
