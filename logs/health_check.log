@@ -1,29 +1,32 @@
-=== HEALTH CHECK REPORT ===
-Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+========================================
+HEALTH CHECK LOG — 2026-11-24 11:10 UTC
+========================================
 
---- Website Status (art0fficial.netlify.app) ---
-Result: HTTP 401 Unauthorized (response time: 0.224s)
-Note: Server header present (Netlify). A 401 on the root page suggests
-the site may require authentication, has deploy issues, or was recently
-reconfigured with restricted access.
+--- Website Status ---
+URL: https://art0fficial.netlify.app/
+HTTP Status: 401 Unauthorized
+Server: Netlify
+Note: TLS tunnel established (200), but site returned 401.
+Previous runs in log history also show 401. This may indicate
+a misconfigured deploy, password protection, or token-based
+gate on the Netlify site.
 
---- Git Status (/sandbox/new) ---
-Branch: master
-Modified: logs/health_check.log (existing log, modified by this run)
-Untracked: trading-bot/ (new directory)
-Nothing committed yet.
-Recent commits:
-  751d015 Autonomous cycle: 2026-11-23_23:59
-  e8af585 Autonomous cycle: 2026-11-23_23:59
-  2c0cadf Autonomous cycle: 2026-11-23_17:57
-  57d57ad Autonomous cycle: 2026-11-23_11:54
-  1e4ce76 Autonomous cycle: 2026-11-23_05:53
+--- Git Status ---
+Working tree: /sandbox/new
+Modified files:
+  M logs/full_cycle.log
+  M logs/health_check.log
+Changes: 74 insertions(+), 30 deletions(-) in 2 files.
+No new/renamed/deleted files. Only log files changed.
 
 --- autonomous_daemon.py ---
-File does not exist at /sandbox/new/autonomous_daemon.py. Nothing to run.
+Not found at /sandbox/new/autonomous_daemon.py — skipped.
 
-=== END REPORT ===
+--- Errors ---
+• Website returns 401 instead of expected 200.
+  This is the primary concern.
+• No other errors detected.
 
-2026-11-24 05:08:03 UTC
-Run #0 appended
-Done
+========================================
+END HEALTH CHECK
+========================================
