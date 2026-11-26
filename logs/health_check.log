@@ -1,20 +1,20 @@
-=== Health Check — 2026-11-26 11:42:04 UTC ===
+=== Health Check ===
+Date: 2026-11-26
 
---- Website: https://art0fficial.netlify.app/ ---
-HTTP/1.1 200 Connection Established
+--- Website Status ---
+URL: https://art0fficial.netlify.app/
+HTTP Status: 401 (Unauthorized)
+Note: Site is responding but returning 401, indicating it may require authentication or has access restrictions.
 
-HTTP/1.1 401 Unauthorized
-Content-Type: text/html; charset=utf-8
-Date: Thu, 26 Nov 2026 11:42:04 GMT
-Server: Netlify
-Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-X-Nf-Request-Id: 01M8BTKA35R626KD7VC8QWWRNW
-
-
---- Git Status (cd /sandbox/new) ---
- M logs/health_check.log
+--- Git Status ---
+Branch: master
+Modified files (unstaged):
+  - logs/full_cycle.log
+  - logs/health_check.log
+No new/untracked files.
 
 --- autonomous_daemon.py ---
-File does not exist
+File does not exist at /sandbox/new/autonomous_daemon.py
 
-=== Done ===
+--- Errors ---
+Website returned 401 status (not a server error, but not a successful 200 either).
