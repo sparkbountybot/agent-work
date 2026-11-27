@@ -1,23 +1,24 @@
-===== HEALTH CHECK REPORT =====
-Date: 2026-11-27
-Host: Linux (6.17.0-1022-nvidia)
+========================================
+HEALTH CHECK — 2026-11-27 20:31:01 UTC
+========================================
 
---- Website Status ---
-URL: https://art0fficial.netlify.app/
-HTTP Response: 401 Unauthorized
-Response Time: 0.195s
-Response Size: 773 bytes
-Notes: Site is private behind Netlify authentication. Server is reachable and responding, but content is not public.
+--- Website: https://art0fficial.netlify.app/ ---
+Status: 401 Unauthorized
+Response time: 0.200s
+Content-Length: 773
+Note: Site is up on Netlify but returns 401 — likely Cloudflare bot challenge or auth gate blocking public access.
 
---- Git Status ---
-Repository: /sandbox/new
-Changes: 1 file modified
-  M logs/health_check.log
-No untracked or staged files.
+--- Git Status (/sandbox/new) ---
+On branch master
+Modified: logs/health_check.log (previous run)
+No other unstaged/uncommitted changes.
 
---- Autonomous Daemon ---
-/sandbox/new/autonomous_daemon.py: NOT FOUND
-No daemon script present.
+--- autonomous_daemon.py ---
+NOT FOUND. /sandbox/new/autonomous_daemon.py does not exist.
 
 --- Errors ---
-None detected. Website returns 401 (expected for private Netlify site).
+None. Health check completed.
+
+========================================
+End of health check
+========================================
